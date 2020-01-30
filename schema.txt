@@ -1,0 +1,45 @@
+
+# SCHEMA FOR QUICKDATABASEDIAGRAMS.COM #
+
+departments
+----------
+dept_no VARCHAR(30) PK
+dept_name VARCHAR(30)
+
+dept_emp
+----------
+emp_no INT FK - employees.emp_no
+dept_no VARHCAR(30) FK >- departments.dept_no
+from_date VARCHAR(30)
+to_date VARCHAR(30)
+
+employees
+---------
+emp_no INT PK 
+birth_date VARCHAR(30)
+first_name VARCHAR(30)
+last_name VARCHAR(30)
+gender TEXT
+hire_date VARCHAR(30)
+
+dept_manager
+------
+dept_no VARCHAR(30) FK >- departments.dept_no
+emp_no INT FK - employees.emp_no
+from_date VARCHAR(30)
+to_date VARCHAR(30)
+
+
+salaries
+-------
+emp_no INT FK - employees.emp_no
+salary INT
+from_date VARCHAR(30)
+to_date VARCHAR(30)
+
+titles 
+------
+emp_no INT FK - employees.emp_no
+title VARCHAR(30)
+from_date VARCHAR(30)
+to_date VARCHAR(30)
